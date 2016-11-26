@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app='LunchCheck'>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lunch Checker</title>
+	</head>
+	<body>
+		<div ng-controller='LunchCheckController'>
+			<h1>Lunch Checker</h1>
+
+			<div>
+				<!--  
+					NOT considering an empty item (e.g.: , ,) as an item towards the dish count
+				-->
+
+				<input id="lunch-menu" type="text"
+				placeholder="list comma separated dishes you usually have for lunch"
+				ng-model="dishes">
+			</div>
+			<div>
+				<button style="color:{{colour}};" ng-click="checkDiet()">Check If Too Much</button>
+			</div>
+			<div style="color:{{colour}};">
+				{{dietMessage}}
+			</div>
+		</div>
+
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
