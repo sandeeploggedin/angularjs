@@ -14,12 +14,13 @@
 					NOT considering an empty item (e.g.: , ,) as an item towards the dish count
 				-->
 
-				<input id="lunch-menu" type="text"
+				<input type="text"
 				placeholder="list comma separated dishes you usually have for lunch"
+				style="border-color:{{colour}};" 
 				ng-model="dishes">
 			</div>
 			<div>
-				<button style="color:{{colour}};" ng-click="checkDiet()">Check If Too Much</button>
+				<button ng-click="checkDiet()">Check If Too Much</button>
 			</div>
 			<div style="color:{{colour}};">
 				{{dietMessage}}
