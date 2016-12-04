@@ -8,7 +8,7 @@
 	function LunchCheckController($scope) {
 		$scope.dishes = "";
 		$scope.dietMessage = "";
-		$scope.colour = "initial";
+		$scope.colour = "initial";//$scope.inputStyle={border: '1px solid black'};
 
 		$scope.checkDiet = function () {
 
@@ -17,7 +17,7 @@
 
 
 			if (dishList.length == 1 && dishList[0].length == 0){
-				$scope.colour = "red";
+				$scope.colour = "red";//$scope.inputStyle = {border: '4px solid red'};
 				$scope.dietMessage = "Please enter data first";
 
 				return;
@@ -29,7 +29,7 @@
 				}
 			}
 
-			$scope.colour = "green";
+			$scope.colour = "green";//$scope.inputStyle = {border: '4px solid green'};
 
 			if (dishCount <= 3){
 				$scope.dietMessage = "Enjoy!";
